@@ -51,7 +51,7 @@ NAME = wolf-mapper
 BUILD_LV2 ?= true
 BUILD_VST2 ?= true
 BUILD_JACK ?= true
-BUILD_DSSI ?= true
+BUILD_DSSI ?= false
 BUILD_LADSPA ?= false
 
 # --------------------------------------------------------------
@@ -60,7 +60,6 @@ BUILD_LADSPA ?= false
 FILES_DSP = \
 	Utils/src/Mathf.cpp \
 	Structures/src/Graph.cpp \
-	Structures/src/Oversampler.cpp \
 	Structures/src/ParamSmooth.cpp \
 	WolfMapperPlugin.cpp
 
