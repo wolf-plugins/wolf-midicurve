@@ -43,9 +43,9 @@ endif
 # --------------------------------------------------------------
 
 release:
-        LINUX=true ./tools/make-release.sh
-        WIN32=true ./tools/make-release.sh
-        ./tools/bundle-source.sh
+	LINUX=true ./tools/make-release.sh
+	WIN32=true ./tools/make-release.sh
+	./tools/bundle-source.sh
 
 # --------------------------------------------------------------
 
