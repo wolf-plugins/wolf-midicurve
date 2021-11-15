@@ -40,7 +40,7 @@ jobs:
     - name: "Linux (GCC)"
       env: 
         LINUX: true 
-        BUILD_DSSI: true 
+        BUILD_DSSI: false 
         CC: gcc 
         CXX: g++
       run: make clean && make
@@ -48,7 +48,7 @@ jobs:
     - name: "Linux (Clang)"
       env: 
         LINUX: true
-        BUILD_DSSI: true 
+        BUILD_DSSI: false 
         CC: clang 
         CXX: clang++
       run: |
