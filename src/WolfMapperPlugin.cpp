@@ -145,9 +145,7 @@ protected:
                 const auto normalizedOutCC = lineEditor.getValueAt(normalizedInCC);
                 const auto outCC = static_cast<uint8_t>(normalizedOutCC * 128.f);
 
-                auto newEvent = MidiEvent();
-                newEvent.data[0] = 0xB0;
-                newEvent.data[1] = event->data[1];
+                auto newEvent = *event;
                 newEvent.data[2] = outCC;
 
                 if (!writeMidiEvent(newEvent))
