@@ -139,11 +139,11 @@ protected:
             if (event->data[0] == 0xB0) // midi cc
             {
                 const uint8_t inCC = event->data[2];                
-                const float normalizedInCC = wolf::clamp(static_cast<float>(inCC) / 128.f, 0.f, 1.f);
+                const float normalizedInCC = wolf::clamp(static_cast<float>(inCC) / 127.f, 0.f, 1.f);
                 setParameterValue(paramOut, normalizedInCC);
 
                 const auto normalizedOutCC = lineEditor.getValueAt(normalizedInCC);
-                const auto outCC = static_cast<uint8_t>(normalizedOutCC * 128.f);
+                const auto outCC = static_cast<uint8_t>(normalizedOutCC * 127.f);
 
                 auto newEvent = *event;
                 newEvent.data[2] = outCC;
