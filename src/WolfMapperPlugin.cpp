@@ -11,11 +11,8 @@
 
 #include "Graph.hpp"
 #include "Mathf.hpp"
-#include "Oversampler.hpp"
 #include "ParamSmooth.hpp"
 #include "WolfMapperParameters.hpp"
-
-#include "DspFilters/Dsp.h"
 
 START_NAMESPACE_DISTRHO
 

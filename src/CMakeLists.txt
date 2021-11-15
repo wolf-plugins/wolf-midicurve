@@ -3,18 +3,7 @@ dpf_add_plugin(wolf-mapper
 	FILES_DSP
 		Utils/src/Mathf.cpp
 		Structures/src/Graph.cpp 
-		Structures/src/Oversampler.cpp 
 		Structures/src/ParamSmooth.cpp 
-                ../libs/DSPFilters/source/Butterworth.cpp
-                ../libs/DSPFilters/source/Biquad.cpp
-                ../libs/DSPFilters/source/Cascade.cpp
-                ../libs/DSPFilters/source/Filter.cpp
-                ../libs/DSPFilters/source/Param.cpp
-                ../libs/DSPFilters/source/Butterworth.cpp
-                ../libs/DSPFilters/source/PoleFilter.cpp
-                ../libs/DSPFilters/source/RBJ.cpp
-                ../libs/DSPFilters/source/Bessel.cpp
-                ../libs/DSPFilters/source/RootFinder.cpp
 		WolfMapperPlugin.cpp
 	FILES_UI
 		Utils/src/Mathf.cpp 
@@ -55,7 +44,6 @@ target_include_directories(wolf-mapper PUBLIC
 	"./Widgets"
 	"./Utils"
 	"./Resources"
-        "../libs/DSPFilters/include"
 )
 
 target_link_libraries(wolf-mapper PUBLIC Threads::Threads)

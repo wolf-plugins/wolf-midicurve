@@ -62,16 +62,6 @@ FILES_DSP = \
 	Structures/src/Graph.cpp \
 	Structures/src/Oversampler.cpp \
 	Structures/src/ParamSmooth.cpp \
-        ../libs/DSPFilters/source/Butterworth.cpp \
-        ../libs/DSPFilters/source/Biquad.cpp \
-        ../libs/DSPFilters/source/Cascade.cpp \
-        ../libs/DSPFilters/source/Filter.cpp \
-        ../libs/DSPFilters/source/Param.cpp \
-        ../libs/DSPFilters/source/Butterworth.cpp \
-        ../libs/DSPFilters/source/PoleFilter.cpp \
-        ../libs/DSPFilters/source/RBJ.cpp \
-        ../libs/DSPFilters/source/Bessel.cpp \
-        ../libs/DSPFilters/source/RootFinder.cpp \
 	WolfMapperPlugin.cpp
 
 FILES_UI  = \
@@ -118,7 +108,7 @@ include ../dpf/Makefile.plugins.mk
 # --------------------------------------------------------------
 # Additional flags
 
-BASE_FLAGS += -I. -I../../dpf/distrho -I../../dpf/dgl -I./Structures -I./Widgets -I./Utils -I./Resources -I../libs/DSPFilters/include
+BASE_FLAGS += -I. -I../../dpf/distrho -I../../dpf/dgl -I./Structures -I./Widgets -I./Utils -I./Resources
 
 BASE_FLAGS += $(CUSTOM_DEFINES)
 
