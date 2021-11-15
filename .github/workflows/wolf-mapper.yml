@@ -2,13 +2,13 @@ name: Wolf Mapper CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
     - '**.md'
     - 'docs/**'
 
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
     - '**.md'
     - 'docs/**'
