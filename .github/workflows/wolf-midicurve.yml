@@ -1,4 +1,4 @@
-name: Wolf Mapper CI
+name: Wolf MidiCurve CI
 
 on:
   push:
