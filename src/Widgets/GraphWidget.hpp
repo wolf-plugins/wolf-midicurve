@@ -57,7 +57,7 @@ public:
     void setMustHideVertices(const bool hide);
 
     /**
-   * Allows WolfMapperUI to close the menu if the mouse appears outside the
+   * Allows WolfMidiCurveUI to close the menu if the mouse appears outside the
    * graph (this can happen when mouse is moved very fast outside the window)
    */
     void hideMenuOnMouseOut(const Point<double> &mouse_pos_absolute);

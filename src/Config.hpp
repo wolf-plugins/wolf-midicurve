@@ -5,7 +5,7 @@
 
 START_NAMESPACE_DISTRHO
 
-#define CONFIG_NAMESPACE WolfMapperConfig
+#define CONFIG_NAMESPACE WolfMidiCurveConfig
 namespace CONFIG_NAMESPACE
 {
 

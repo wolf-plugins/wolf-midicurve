@@ -12,14 +12,14 @@
 #include "Graph.hpp"
 #include "Mathf.hpp"
 #include "ParamSmooth.hpp"
-#include "WolfMapperParameters.hpp"
+#include "WolfMidiCurveParameters.hpp"
 
 START_NAMESPACE_DISTRHO
 
-class WolfMapper : public Plugin
+class WolfMidiCurve : public Plugin
 {
 public:
-    WolfMapper()
+    WolfMidiCurve()
         : Plugin(paramCount, 0, 1)
     {
     }
@@ -27,7 +27,7 @@ public:
 protected:
     const char *getLabel() const noexcept override
     {
-        return "Wolf Mapper";
+        return "Wolf MidiCurve";
     }
 
     const char *getDescription() const noexcept override
@@ -42,7 +42,7 @@ protected:
 
     const char *getHomePage() const noexcept override
     {
-        return "https://github.com/wolf-plugins/wolf-mapper";
+        return "https://github.com/wolf-plugins/wolf-midicurve";
     }
 
     const char *getLicense() const noexcept override
@@ -170,12 +170,12 @@ private:
 
     Mutex mutex;
 
-    DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(WolfMapper)
+    DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(WolfMidiCurve)
 };
 
 Plugin *createPlugin()
 {
-    return new WolfMapper();
+    return new WolfMidiCurve();
 }
 
 END_NAMESPACE_DISTRHO

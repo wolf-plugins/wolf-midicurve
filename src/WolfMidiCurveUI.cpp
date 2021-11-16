@@ -3,13 +3,13 @@
 #include "Config.hpp"
 #include "Margin.hpp"
 #include "Window.hpp"
-#include "WolfMapperUI.hpp"
+#include "WolfMidiCurveUI.hpp"
 
 #include <string>
 
 START_NAMESPACE_DISTRHO
 
-WolfMapperUI::WolfMapperUI()
+WolfMidiCurveUI::WolfMidiCurveUI()
     : UI(611, 662)
 {
     const uint minWidth = 611;
@@ -45,11 +45,11 @@ WolfMapperUI::WolfMapperUI()
     positionWidgets(width, height);
 }
 
-WolfMapperUI::~WolfMapperUI()
+WolfMidiCurveUI::~WolfMidiCurveUI()
 {
 }
 
-void WolfMapperUI::positionWidgets(uint width, uint height)
+void WolfMidiCurveUI::positionWidgets(uint width, uint height)
 {
     //TODO: Clean that up
 
@@ -77,7 +77,7 @@ void WolfMapperUI::positionWidgets(uint width, uint height)
     fHandleResize->setAbsolutePos(width - fHandleResize->getWidth(), height - fHandleResize->getHeight());
 }
 
-void WolfMapperUI::parameterChanged(uint32_t index, float value)
+void WolfMidiCurveUI::parameterChanged(uint32_t index, float value)
 {
     switch (index)
     {
@@ -89,7 +89,7 @@ void WolfMapperUI::parameterChanged(uint32_t index, float value)
     }
 }
 
-void WolfMapperUI::stateChanged(const char *key, const char *value)
+void WolfMidiCurveUI::stateChanged(const char *key, const char *value)
 {
     if (std::strcmp(key, "graph") == 0)
         fGraphWidget->rebuildFromString(value);
@@ -97,7 +97,7 @@ void WolfMapperUI::stateChanged(const char *key, const char *value)
     repaint();
 }
 
-void WolfMapperUI::onNanoDisplay()
+void WolfMidiCurveUI::onNanoDisplay()
 {
     const float width = getWidth();
     const float height = getHeight();
@@ -106,7 +106,7 @@ void WolfMapperUI::onNanoDisplay()
     beginPath();
 
     rect(0.f, 0.f, width, height);
-    fillColor(WolfMapperConfig::plugin_background);
+    fillColor(WolfMidiCurveConfig::plugin_background);
 
     fill();
 
@@ -138,34 +138,34 @@ void WolfMapperUI::onNanoDisplay()
     closePath();
 }
 
-void WolfMapperUI::uiIdle()
+void WolfMidiCurveUI::uiIdle()
 {
 }
 
-bool WolfMapperUI::onMouse(const MouseEvent &ev)
-{
-    fGraphWidget->hideMenuOnMouseOut(ev.pos);
-    return false;
-}
-
-bool WolfMapperUI::onMotion(const MotionEvent &ev)
+bool WolfMidiCurveUI::onMouse(const MouseEvent &ev)
 {
     fGraphWidget->hideMenuOnMouseOut(ev.pos);
     return false;
 }
 
-void WolfMapperUI::uiReshape(uint width, uint height)
+bool WolfMidiCurveUI::onMotion(const MotionEvent &ev)
+{
+    fGraphWidget->hideMenuOnMouseOut(ev.pos);
+    return false;
+}
+
+void WolfMidiCurveUI::uiReshape(uint width, uint height)
 {
     //setSize(width, height);
     positionWidgets(width, height);
 }
 
-bool WolfMapperUI::onKeyboard(const KeyboardEvent &)
+bool WolfMidiCurveUI::onKeyboard(const KeyboardEvent &)
 {
     return true;
 }
 
-void WolfMapperUI::nanoButtonClicked(NanoButton *nanoButton)
+void WolfMidiCurveUI::nanoButtonClicked(NanoButton *nanoButton)
 {
     if (nanoButton == fButtonResetGraph)
     {
@@ -174,14 +174,14 @@ void WolfMapperUI::nanoButtonClicked(NanoButton *nanoButton)
     }
 }
 
-void WolfMapperUI::resizeHandleMoved(int width, int height)
+void WolfMidiCurveUI::resizeHandleMoved(int width, int height)
 {
     setSize(width, height);
 }
 
 UI *createUI()
 {
-    return new WolfMapperUI();
+    return new WolfMidiCurveUI();
 }
 
 END_NAMESPACE_DISTRHO

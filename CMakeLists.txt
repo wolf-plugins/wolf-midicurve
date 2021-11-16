@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.7)
 
-project(wolf-mapper)
+project(wolf-midicurve)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)

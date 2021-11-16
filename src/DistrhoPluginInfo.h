@@ -1,8 +1,8 @@
 #pragma once
 
-#define DISTRHO_PLUGIN_NAME  "Wolf Mapper"
+#define DISTRHO_PLUGIN_NAME  "Wolf MidiCurve"
 #define DISTRHO_PLUGIN_BRAND "Wolf Plugins"
-#define DISTRHO_PLUGIN_URI   "https://github.com/wolf-plugins/wolf-mapper"
+#define DISTRHO_PLUGIN_URI   "https://github.com/wolf-plugins/wolf-midicurve"
 
 #define DISTRHO_PLUGIN_HAS_UI          1
 

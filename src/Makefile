@@ -43,7 +43,7 @@ endif
 # --------------------------------------------------------------
 # Project name, used for binaries
 
-NAME = wolf-mapper
+NAME = wolf-midicurve
 
 # --------------------------------------------------------------
 # Plugin types to build
@@ -61,7 +61,7 @@ FILES_DSP = \
 	Utils/src/Mathf.cpp \
 	Structures/src/Graph.cpp \
 	Structures/src/ParamSmooth.cpp \
-	WolfMapperPlugin.cpp
+	WolfMidiCurvePlugin.cpp
 
 FILES_UI  = \
 	Utils/src/Mathf.cpp \
@@ -91,7 +91,7 @@ FILES_UI  = \
 	Widgets/src/MenuWidget.cpp \
 	Resources/Fonts/chivo_bold.cpp \
 	Resources/Fonts/chivo_italic.cpp \
-	WolfMapperUI.cpp
+	WolfMidiCurveUI.cpp
 
 # --------------------------------------------------------------
 # Do some magic

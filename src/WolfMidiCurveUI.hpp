@@ -14,17 +14,17 @@
 #include "ResizeHandle.hpp"
 #include "VolumeKnob.hpp"
 #include "WidgetBar.hpp"
-#include "WolfMapperParameters.hpp"
+#include "WolfMidiCurveParameters.hpp"
 
 START_NAMESPACE_DISTRHO
 
-class WolfMapperUI : public UI,
+class WolfMidiCurveUI : public UI,
                      public NanoButton::Callback,
                      public ResizeHandle::Callback
 {
 public:
-    WolfMapperUI();
-    ~WolfMapperUI();
+    WolfMidiCurveUI();
+    ~WolfMidiCurveUI();
 
     float getParameterValue(uint32_t index) const;
 
@@ -53,7 +53,7 @@ private:
     ScopedPointer<ResetGraphButton> fButtonResetGraph;
     ScopedPointer<NanoLabel> fLabelButtonResetGraph;
 
-    DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(WolfMapperUI)
+    DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(WolfMidiCurveUI)
 };
 
 END_NAMESPACE_DISTRHO

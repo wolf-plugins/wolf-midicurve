@@ -1,17 +1,17 @@
-# Wolf Mapper
-[![Build Status](https://img.shields.io/github/workflow/status/wolf-plugins/wolf-mapper/Wolf%20Mapper%20CI.svg?logo=github)](https://github.com/wolf-plugins/wolf-mapper/actions?query=workflow%3A%22Wolf+Mapper+CI%22)
+# Wolf MidiCurve
+[![Build Status](https://img.shields.io/github/workflow/status/wolf-plugins/wolf-midicurve/Wolf%20MidiCurve%20CI.svg?logo=github)](https://github.com/wolf-plugins/wolf-midicurve/actions?query=workflow%3A%22Wolf+MidiCurve+CI%22)
 
-![Wolf Mapper](https://raw.githubusercontent.com/wolf-plugins/wolf-mapper/master/docs/images/screenshot.png)
+![Wolf MidiCurve](https://raw.githubusercontent.com/wolf-plugins/wolf-midicurve/master/docs/images/screenshot.png)
 
-Wolf Mapper is a MIDI remapping plugin. It can be built as an LV2 or VST plugin and as a standalone Jack application.
+Wolf MidiCurve is a MIDI remapping plugin. It can be built as an LV2 or VST plugin and as a standalone Jack application.
 
 ## Build manually
 
 First, clone the repo (note the "--recursive" argument):
 
 ```
-git clone --recursive https://github.com/wolf-plugins/wolf-mapper.git
-cd wolf-mapper
+git clone --recursive https://github.com/wolf-plugins/wolf-midicurve.git
+cd wolf-midicurve
 ```
 
 Then, run:

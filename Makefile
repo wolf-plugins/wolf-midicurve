@@ -10,8 +10,8 @@ all: libs plugins gen
 
 # --------------------------------------------------------------
 
-DISTRHO_NAMESPACE = WolfMapperDISTRHO
-DGL_NAMESPACE = WolfMapperDGL
+DISTRHO_NAMESPACE = WolfMidiCurveDISTRHO
+DGL_NAMESPACE = WolfMidiCurveDGL
 
 export CUSTOM_DEFINES = -DDGL_FILE_BROWSER_DISABLED -DDISTRHO_NAMESPACE=$(DISTRHO_NAMESPACE) -DDGL_NAMESPACE=$(DGL_NAMESPACE)
 

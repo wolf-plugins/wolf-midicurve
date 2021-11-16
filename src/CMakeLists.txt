@@ -1,10 +1,10 @@
-dpf_add_plugin(wolf-mapper
+dpf_add_plugin(wolf-midicurve
         TARGETS jack lv2 vst2
 	FILES_DSP
 		Utils/src/Mathf.cpp
 		Structures/src/Graph.cpp 
 		Structures/src/ParamSmooth.cpp 
-		WolfMapperPlugin.cpp
+		WolfMidiCurvePlugin.cpp
 	FILES_UI
 		Utils/src/Mathf.cpp 
 		Structures/src/Graph.cpp 
@@ -33,10 +33,10 @@ dpf_add_plugin(wolf-mapper
 		Widgets/src/MenuWidget.cpp
 		Resources/Fonts/chivo_bold.cpp 
 		Resources/Fonts/chivo_italic.cpp 
-		WolfMapperUI.cpp
+		WolfMidiCurveUI.cpp
 )
 
-target_include_directories(wolf-mapper PUBLIC
+target_include_directories(wolf-midicurve PUBLIC
 	"."
 	"../dpf/distrho"
 	"../dpf/dgl"
@@ -46,4 +46,4 @@ target_include_directories(wolf-mapper PUBLIC
 	"./Resources"
 )
 
-target_link_libraries(wolf-mapper PUBLIC Threads::Threads)
+target_link_libraries(wolf-midicurve PUBLIC Threads::Threads)
