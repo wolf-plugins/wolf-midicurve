@@ -1,8 +1,6 @@
 # Wolf MidiCurve
 [![Build Status](https://img.shields.io/github/workflow/status/wolf-plugins/wolf-midicurve/Wolf%20MidiCurve%20CI.svg?logo=github)](https://github.com/wolf-plugins/wolf-midicurve/actions?query=workflow%3A%22Wolf+MidiCurve+CI%22)
 
-![Wolf MidiCurve](https://raw.githubusercontent.com/wolf-plugins/wolf-midicurve/master/docs/images/screenshot.png)
-
 Wolf MidiCurve is a MIDI remapping plugin. It can be built as an LV2 or VST plugin and as a standalone Jack application.
 
 ## Build manually
